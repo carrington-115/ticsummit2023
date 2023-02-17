@@ -4,4 +4,13 @@ import LandIntro from "./LandIntro";
 import Whysummit from "./Whysummit";
 import AboutTic from "./AboutTic";
 import Eligibility from "./Eligibility";
-export { Footer, Header, LandIntro, Whysummit, AboutTic, Eligibility };
+import Curriculum from "./Curriculum";
+export {
+  Footer,
+  Header,
+  LandIntro,
+  Whysummit,
+  AboutTic,
+  Eligibility,
+  Curriculum,
+};

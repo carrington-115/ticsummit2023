@@ -3,36 +3,50 @@ import styled from "styled-components";
 import { dots } from "../Images";
 import { Zoom } from "react-reveal";
 
+const reasons = [
+  {
+    id: 1,
+    reason:
+      "A chance to receive mentoring from successful business people and professors at the national Polytechnique",
+  },
+  {
+    id: 2,
+    reason: "A chance to have a scholarship with our program ",
+  },
+  {
+    id: 3,
+    reason: "Certificates of recognition to all selected participants",
+  },
+  {
+    id: 4,
+    reason: "Prizes worth 1 Million CFA Francs to the finalists.",
+  },
+  {
+    id: 5,
+    reason:
+      "Free training on many personal and professional development topics",
+  },
+];
 function Whysummit() {
   return (
     <Container>
       <h1>Why TiC Summit??</h1>
       <div className="reason-grid">
-        <div>
-          <h1>1.</h1>
-          <h2>
-            A chance to receive mentoring from successful business people and
-            professors at the national Polytechnique
-          </h2>
-        </div>
-        <div>
-          <h1>2.</h1>
-          <h2>A chance to have a scholarship with our program</h2>
-        </div>
-        <div>
-          <h1>3.</h1>
-          <h2>Certificates of recognition to all selected participants</h2>
-        </div>
-        <div>
-          <h1>4.</h1>
-          <h2>Prizes worth 1 Million CFA Francs to the finalists.</h2>
-        </div>
-        <div>
-          <h1>5.</h1>
-          <h2>
-            Free training on many personal and professional development topics
-          </h2>
-        </div>
+        {reasons.map((reason) => (
+          <div key={reason.id}>
+            <h1>{reason.id}</h1>
+            <h2>{reason.reason}</h2>
+          </div>
+        ))}
+      </div>
+      <div className="reason-mob">
+        <ol>
+          {reasons.map((reason) => (
+            <li key={reason.id}>
+              <h2>{reason.reason}</h2>
+            </li>
+          ))}
+        </ol>
       </div>
       <hr />
       <Zoom top>
@@ -74,10 +88,7 @@ const Container = styled.section`
     margin: 0 3cm;
     z-index: 2;
     @media (min-width: 320px) and (max-width: 480px) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 0.25cm;
-      margin: 0;
-      margin: 0 0.5cm;
+      display: none;
     }
     div {
       h2 {
@@ -90,6 +101,22 @@ const Container = styled.section`
           display: none;
         }
       }
+    }
+  }
+  .reason-mob {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+    ol {
+      width: 80%;
+      li,
+      li::marker {
+        font-size: 1.2em;
+      }
+    }
+    @media (min-width: 480px) {
+      display: none;
     }
   }
   .dot1,

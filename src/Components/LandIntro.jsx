@@ -94,6 +94,7 @@ const Container = styled.div`
     color: white;
     background-color: black;
     border-radius: 5px;
+    z-index: 2;
     cursor: pointer;
     border: 2px solid transparent;
     &:hover {

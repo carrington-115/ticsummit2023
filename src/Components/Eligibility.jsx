@@ -30,6 +30,9 @@ function Eligibility() {
           <h4>Have a creative Idea</h4>
         </div>
       </Fade>
+      <div className="new-line">
+        <hr />
+      </div>
     </Container>
   );
 }
@@ -39,25 +42,32 @@ export default Eligibility;
 const Container = styled.section`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1cm;
   div {
     display: flex;
     margin-bottom: 0.5cm;
     align-items: center;
+    width: 80%;
     @media (min-width: 320px) and (max-width: 480px) {
-      width: 5px;
+      width: 100%;
     }
     h4 {
-      font-size: 2em;
+      font-size: 1.5em;
       margin-left: 1cm;
+      width: 50%;
       @media (min-width: 320px) and (max-width: 480px) {
         font-size: 1em;
+        width: 40%;
+        margin-left: 0.5cm;
       }
     }
-    svg {
-      position: relative;
+    img {
+      width: 50%;
+      height: 100%;
       @media (min-width: 320px) and (max-width: 480px) {
-        width: 2px;
-        height: 1cm;
+        width: 60%;
       }
     }
   }
@@ -68,6 +78,9 @@ const Container = styled.section`
     margin-bottom: 1cm;
     h1 {
       font-size: 4em;
+      @media (min-width: 320px) and (max-width: 480px) {
+        font-size: 1.5em;
+      }
     }
   }
   .line {
@@ -77,6 +90,14 @@ const Container = styled.section`
     hr {
       width: 50%;
       margin-bottom: 1cm;
+    }
+  }
+  .new-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    hr {
+      width: 50%;
     }
   }
 `;
