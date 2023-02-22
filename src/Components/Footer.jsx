@@ -110,6 +110,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (min-width: 320px) and (max-width: 480px) {
+      display: none;
+    }
     .logo {
       margin: 0 0 1.5cm 0;
     }
@@ -136,6 +139,13 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 1cm;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 30%;
+      margin-bottom: 1cm;
+      h1 {
+        font-size: 1.2em;
+      }
+    }
     ul {
       li {
         a {
@@ -143,22 +153,38 @@ const Container = styled.div`
           font-size: 1.2em;
           color: white;
           line-height: 1cm;
+          @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 1em;
+          }
         }
       }
     }
   }
   .third {
     width: 50%;
-    margin-top: 1cm;
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 60%;
+      margin-bottom: 1cm;
+    }
     .socialmedia {
       margin-left: 1cm;
+      @media (min-width: 320px) and (max-width: 480px) {
+        margin: 0;
+      }
       .links {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-right: 2cm;
         margin-top: 0.5cm;
+        @media (min-width: 320px) and (max-width: 480px) {
+          margin: 0;
+          margin-right: 0.25cm;
+        }
         div {
+          @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0 3px;
+          }
           img {
             width: 100%;
             height: 100%;
@@ -172,6 +198,10 @@ const Container = styled.div`
       h3 {
         font-size: 1.5em;
         width: 50%;
+        @media (min-width: 320px) and (max-width: 480px) {
+          width: 90%;
+          font-size: 1.2em;
+        }
       }
       .btn {
         display: flex;
@@ -179,6 +209,13 @@ const Container = styled.div`
         justify-content: space-between;
         margin-top: 0.5cm;
         margin-right: 50%;
+        @media (min-width: 320px) and (max-width: 480px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+        }
         button {
           padding: 0.25cm 1cm;
           font-size: 1.3em;
@@ -188,6 +225,11 @@ const Container = styled.div`
           cursor: pointer;
           &:hover {
             color: black;
+          }
+          @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 1em;
+            width: 80%;
+            margin: 0.15cm 0;
           }
         }
       }

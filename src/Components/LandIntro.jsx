@@ -76,8 +76,9 @@ const Container = styled.div`
     line-height: 1cm;
     font-size: 23px;
     margin-top: 0.5cm;
+    font-weight: normal;
     p {
-      font-weight: bold;
+      font-weight: normal;
     }
     @media (min-width: 320px) and (max-width: 480px) {
       width: 90%;

@@ -63,6 +63,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1cm 2cm;
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 0.5cm;
+  }
   .first-part {
     h1 {
       font-size: 3em;
@@ -71,11 +74,18 @@ const Container = styled.div`
       font-size: 1.5em;
     }
   }
+
   .part-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2cm;
     margin: 1cm 1cm;
+    @media (min-width: 320px) and (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0;
+      margin: 0.5cm 0.25cm;
+      grid-gap: 0.5cm;
+    }
     div {
       box-shadow: 2px 1px 26px -4px rgba(0, 0, 0, 0.3);
       padding: 0.5cm;
