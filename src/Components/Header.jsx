@@ -63,7 +63,11 @@ function Header() {
             <GrClose />
           </div>
         </div>
-        <div className="pages" show={showBar}></div>
+        <div className="pages" show={showBar}>
+          <PageLink to="/">Home</PageLink>
+          <PageLink to="/">Curriculum</PageLink>
+          <button>Apply</button>
+        </div>
       </SideBar>
     </Container>
   );
@@ -80,7 +84,9 @@ const PageLink = styled(Link)`
     font-weight: bold;
   }
   @media (min-width: 320px) and (max-width: 480px) {
-    display: none;
+    font-size: 25px;
+    margin: 0;
+    margin: 0.25cm 0;
   }
 `;
 
@@ -217,6 +223,24 @@ const SideBar = styled.div`
     svg {
       width: 1.5cm;
       height: 1.5cm;
+    }
+  }
+  .pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button {
+      background-color: #000000;
+      color: #e8aa42;
+      padding: 0.25cm 1cm;
+      font-size: 20px;
+      border-radius: 5px;
+      margin-top: 1cm;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
     }
   }
 `;
