@@ -2,7 +2,7 @@ import "./App.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 // import for pages
-import { Home } from "./Pages";
+import { Home, Curriculum } from "./Pages";
 
 // import for components
 import { Header, Footer } from "./Components";
@@ -14,6 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/curriculum" element={<Curriculum />} />
         </Routes>
         <Footer />
       </Router>

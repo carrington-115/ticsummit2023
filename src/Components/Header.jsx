@@ -16,29 +16,42 @@ function Header() {
         setScroll(true);
       }
     });
-
-    
   }, []);
-
- 
 
   return (
     <Container scrolling={scroll}>
-      <Link to="/" style={logoLinkStyle}>
+      <Link className="logo-link" to="/" style={logoLinkStyle}>
         <div className="logo" scrolling={scroll}>
           <img src={Logo} alt="logo" />
         </div>
       </Link>
-      <button>Apply</button>
+      <nav className="navigation">
+        <PageLink to="/" style={logoLinkStyle}>
+          Home
+        </PageLink>
+        <PageLink to="/curriculum" style={logoLinkStyle}>
+          Curriculum
+        </PageLink>
+        <button>Apply</button>
+      </nav>
     </Container>
   );
 }
 
 export default Header;
 
+const PageLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  margin: 0 0.5cm;
+  font-size: 20px;
+  &:hover {
+    font-weight: bold;
+  }
+`;
+
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0.25cm 4cm 0.25cm 2cm;
   @media (min-width: 320px) and (max-width: 480px) {
@@ -69,6 +82,9 @@ const Container = styled.div`
       height: 100%;
     }
   }
+  .logo-link {
+    justify-self: flex-start;
+  }
   button {
     background-color: #000000;
     color: #e8aa42;
@@ -79,5 +95,8 @@ const Container = styled.div`
     &:hover {
       color: white;
     }
+  }
+  nav {
+    justify-self: flex-end;
   }
 `;
