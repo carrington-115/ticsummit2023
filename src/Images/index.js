@@ -18,9 +18,21 @@ import linkedin from "./linkedin.png";
 import slack from "./slack.png";
 import tiktok from "./tiktok.png";
 import twitter from "./twitter.png";
+import businessplan from "./businessplan.png";
+import designthinking from "./designthinking.png";
+import finance from "./finance.png";
+import problemsolving from "./problemsolving.png";
+import projectmanagement from "./projectmanagement.png";
+import prototyping from "./prototyping.png";
 export {
   Logo,
+  designthinking,
+  finance,
+  problemsolving,
+  projectmanagement,
+  prototyping,
   DiagBox,
+  businessplan,
   dots,
   logo2,
   image1,
