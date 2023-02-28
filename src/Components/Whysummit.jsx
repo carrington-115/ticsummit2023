@@ -72,7 +72,9 @@ const Container = styled.section`
   align-items: center;
   margin-bottom: 1cm;
   position: relative;
-
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-top: 4cm;
+  }
   h1 {
     font-size: 3em;
     color: #0066ff;

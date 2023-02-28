@@ -7,7 +7,6 @@ import {
   logo2,
   opendreams,
   polytech,
-  slack,
   tiktok,
   twitter,
 } from "../Images";
@@ -39,7 +38,6 @@ const socialMediaLinks = [
   { id: 1, location: facebook },
   { id: 2, location: instagram },
   { id: 3, location: linkedin },
-  { id: 4, location: slack },
   { id: 5, location: tiktok },
   { id: 6, location: twitter },
 ];

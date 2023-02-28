@@ -16,10 +16,11 @@ function Header() {
         setScroll(true);
       }
     });
+
+    
   }, []);
 
-  const dateTest = new Date();
-  console.log("date", dateTest);
+ 
 
   return (
     <Container scrolling={scroll}>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { DiagBox, dots } from "../Images";
 import { Zoom } from "react-reveal";
+import CountDown from "./Countdown/CountDown";
 
 function LandIntro() {
   return (
@@ -16,24 +17,7 @@ function LandIntro() {
         technology skills.
       </h3>
       <button>Apply Now</button>
-      <CountDown>
-        <div className="count">
-          14 <br />
-          Days
-        </div>
-        <div className="count">
-          14
-          <br /> Hours
-        </div>
-        <div className="count">
-          14
-          <br /> min
-        </div>
-        <div className="count">
-          14
-          <br /> Sec
-        </div>
-      </CountDown>
+      <CountDown />
       <hr />
       <Zoom right>
         <img className="style1" src={DiagBox} />
@@ -162,32 +146,5 @@ const Container = styled.div`
   .style4,
   .style5 {
     z-index: 0;
-  }
-`;
-
-const CountDown = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 35%;
-  margin-top: 0.5cm;
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 90%;
-  }
-  .count {
-    font-size: 1.5em;
-    text-align: center;
-    font-weight: bold;
-    padding: 0.2cm 0.4cm;
-    border: 1px solid #0066ff;
-    border-radius: 5px;
-    color: #0066ff;
-    width: 2cm;
-    height: 1.8cm;
-    @media (min-width: 320px) and (max-width: 480px) {
-      font-size: 1.2em;
-      width: 1.2cm;
-      height: 1.5cm;
-    }
   }
 `;
