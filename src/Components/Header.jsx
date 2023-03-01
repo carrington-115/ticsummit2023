@@ -38,7 +38,7 @@ function Header() {
             Curriculum
           </PageLink>
         </div>
-        <button>Apply</button>
+        <button className="header-btn">Apply</button>
         <div
           className="menu"
           onClick={() => {
@@ -64,8 +64,16 @@ function Header() {
           </div>
         </div>
         <div className="pages" show={showBar}>
-          <PageLink to="/">Home</PageLink>
-          <PageLink to="/">Curriculum</PageLink>
+          <SidePageLink show={showBar} onClick={() => setShowBar(false)} to="/">
+            Home
+          </SidePageLink>
+          <SidePageLink
+            show={showBar}
+            onClick={() => setShowBar(false)}
+            to="/curriculum"
+          >
+            Curriculum
+          </SidePageLink>
           <button>Apply</button>
         </div>
       </SideBar>
@@ -89,6 +97,7 @@ const PageLink = styled(Link)`
     margin: 0.25cm 0;
   }
 `;
+const SidePageLink = styled(PageLink)``;
 
 const Container = styled.div`
   display: flex;
@@ -135,6 +144,11 @@ const Container = styled.div`
     cursor: pointer;
     &:hover {
       color: white;
+    }
+  }
+  .header-btn {
+    @media (min-width: 320px) and (max-width: 480px) {
+      display: none;
     }
   }
 
