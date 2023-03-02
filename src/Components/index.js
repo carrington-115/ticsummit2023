@@ -6,6 +6,7 @@ import AboutTic from "./AboutTic";
 import Eligibility from "./Eligibility";
 import Curriculum from "./Curriculum";
 import ContentVideos from "./ContentVideos";
+import CoursePageNavbar from "./CoursePageNavbar";
 export {
   Footer,
   Header,
@@ -15,4 +16,5 @@ export {
   Eligibility,
   Curriculum,
   ContentVideos,
+  CoursePageNavbar,
 };

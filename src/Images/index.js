@@ -24,6 +24,7 @@ import finance from "./finance.png";
 import problemsolving from "./problemsolving.png";
 import projectmanagement from "./projectmanagement.png";
 import prototyping from "./prototyping.png";
+
 export {
   Logo,
   designthinking,

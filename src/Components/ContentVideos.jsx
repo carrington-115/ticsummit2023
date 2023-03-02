@@ -70,42 +70,42 @@ function ContentVideos() {
         name={videosContent[0].name}
         instructor={videosContent[0].instructor}
         content={videosContent[0].content}
-        link="/"
+        link="/courses/designthinking"
       />
       <Component
         imgLink={videosContent[1].image}
         name={videosContent[1].name}
         instructor={videosContent[1].instructor}
         content={videosContent[1].content}
-        link="/"
+        link="/courses/businessplan"
       />
       <Component
         imgLink={videosContent[2].image}
         name={videosContent[2].name}
         instructor={videosContent[2].instructor}
         content={videosContent[2].content}
-        link="/"
+        link="/courses/projectmanagement"
       />
       <Component
         imgLink={videosContent[3].image}
         name={videosContent[3].name}
         instructor={videosContent[3].instructor}
         content={videosContent[3].content}
-        link="/"
+        link="/courses/prototypingwithfigma"
       />
       <Component
         imgLink={videosContent[4].image}
         name={videosContent[4].name}
         instructor={videosContent[4].instructor}
         content={videosContent[4].content}
-        link="/"
+        link="/courses/financemanagement"
       />
       <Component
         imgLink={videosContent[5].image}
         name={videosContent[5].name}
         instructor={videosContent[5].instructor}
         content={videosContent[5].content}
-        link="/"
+        link="/problemsolvingapproach"
       />
     </Container>
   );
