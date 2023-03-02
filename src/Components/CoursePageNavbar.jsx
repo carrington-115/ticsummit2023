@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { HiMenu } from "react-icons/hi";
+import { ImExit } from "react-icons/im";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function CoursePageNavbar() {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(true);
   const navigate = useNavigate();
 
   return (
@@ -12,9 +13,9 @@ function CoursePageNavbar() {
       <div className="menu" onClick={() => setToggleMenu(!toggleMenu)}>
         <HiMenu />
       </div>
-      <button onClick={() => navigate("/curriculum")}>
-        Back to Curriculum Page
-      </button>
+      <div className="close" onClick={() => navigate("/curriculum")}>
+        <ImExit />
+      </div>
       <SideBar show={toggleMenu}>
         <Pages>
           <SidePageLink show={toggleMenu} to="/courses/designthinking">
@@ -67,18 +68,19 @@ const NavigationContainer = styled.nav`
       color: white;
     }
   }
-  button {
-    font-size: 1.2em;
-    padding: 0.25cm 0.5cm;
-    margin-right: 2cm;
-    background-color: #ffff;
+  .close {
+    width: 1cm;
+    height: 1cm;
     border: 2px solid transparent;
-    color: black;
-    border-radius: 1cm;
+    border-radius: 10px;
+    padding: 0.15cm;
     cursor: pointer;
     &:hover {
-      border-color: white;
-      background-color: transparent;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    svg {
+      width: 100%;
+      height: 100%;
       color: white;
     }
   }

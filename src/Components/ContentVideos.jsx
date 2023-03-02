@@ -105,7 +105,7 @@ function ContentVideos() {
         name={videosContent[5].name}
         instructor={videosContent[5].instructor}
         content={videosContent[5].content}
-        link="/problemsolvingapproach"
+        link="/courses/problemsolvingapproach"
       />
     </Container>
   );

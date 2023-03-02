@@ -20,7 +20,7 @@ const Container = styled.div`
   min-height: 100vh;
   position: relative;
   .content {
-    min-height: 89vh;
+    max-height: 89vh;
     position: absolute;
     right: 0;
     top: 50;
@@ -28,5 +28,6 @@ const Container = styled.div`
     width: 80%;
     z-index: 0;
     display: flex;
+    overflow-y: visible;
   }
 `;
