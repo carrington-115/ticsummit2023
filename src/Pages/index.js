@@ -8,8 +8,10 @@ import Figmaprototyping from "./Courses/Figmaprototyping";
 import Finance from "./Courses/Finance";
 import Problemsolving from "./Courses/Problemsolving";
 import Projectmanagement from "./Courses/Projectmanagement";
-import Apply from "./Apply";
-
+import Apply from "./Apply/Apply";
+import Payments from "./Apply/Payments";
+import ApplyForm from "./Apply/ApplyForm";
+import Instructions from "./Apply/Instructions";
 export {
   Home,
   About,
@@ -22,4 +24,7 @@ export {
   Problemsolving,
   Projectmanagement,
   Apply,
+  Payments,
+  ApplyForm,
+  Instructions,
 };

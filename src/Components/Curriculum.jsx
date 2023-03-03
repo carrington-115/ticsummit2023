@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { bmc, pitch, design_thinking } from "../Images";
 import { Flip } from "react-reveal";
+import { useNavigate } from "react-router-dom";
 
 const part = [
   {
     id: 1,
     location: design_thinking,
     topic: "Design Thinking",
+    link: "/courses/designthinking",
     content:
       "It’s a 5 step process which involve: (1) Researching the user (Empathize), (2) Stating the problem (Define), (3) Developing your ideas (ideate), (4) Creating your solution (prototyping), (5) Testing (Try your solution)",
   },
@@ -15,6 +17,7 @@ const part = [
     id: 1,
     location: bmc,
     topic: "Business Model Canvas",
+    link: "/courses/businessplan",
     content:
       "A visual representation of a business model, highlighting goals, otives, partners, users, competitors, market and source of  income.",
   },
@@ -22,11 +25,13 @@ const part = [
     id: 1,
     location: pitch,
     topic: "Project Pitching",
+    link: "/curriculum",
     content:
       "This is the process of presenting ones project or idea to a potential investor or to a panel of judges/jury members for a prize either in kind or in cash.",
   },
 ];
 function Curriculum() {
+  const navigate = useNavigate();
   return (
     <Container>
       <div className="first-part">
@@ -42,7 +47,7 @@ function Curriculum() {
       <div className="part-grid">
         {part.map((part) => (
           <Flip right>
-            <div key={part.id}>
+            <div key={part.id} onClick={() => navigate(part.link)}>
               <img src={part.location} />
               <h2>{part.topic}</h2>
               <p>{part.content}</p>
@@ -50,7 +55,7 @@ function Curriculum() {
           </Flip>
         ))}
       </div>
-      <div className="more">
+      <div className="more" onClick={() => navigate("/curriculum")}>
         <h2>More</h2>
       </div>
     </Container>

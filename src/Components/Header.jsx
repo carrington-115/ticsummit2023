@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Logo } from "../Images";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
@@ -11,6 +11,7 @@ const logoLinkStyle = {
 function Header() {
   const [scroll, setScroll] = useState(false);
   const [showBar, setShowBar] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -38,7 +39,9 @@ function Header() {
             Curriculum
           </PageLink>
         </div>
-        <button className="header-btn">Apply</button>
+        <button className="header-btn" onClick={() => navigate("/apply")}>
+          Apply
+        </button>
         <div
           className="menu"
           onClick={() => {

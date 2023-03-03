@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-function Apply() {
-  return <Container>Apply</Container>;
+function ApplyForm() {
+  return <Container>ApplyForm</Container>;
 }
 
-export default Apply;
+export default ApplyForm;
 
 const Container = styled.div``;

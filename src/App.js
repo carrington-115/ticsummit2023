@@ -13,6 +13,9 @@ import {
   Problemsolving,
   Figmaprototyping,
   Apply,
+  Instructions,
+  Payments,
+  ApplyForm,
 } from "./Pages";
 
 // import for components
@@ -33,7 +36,11 @@ function App() {
             <Route path="financemanagement" element={<Finance />} />
             <Route path="problemsolvingapproach" element={<Problemsolving />} />
             <Route path="prototypingwithfigma" element={<Figmaprototyping />} />
-            <Route path="apply" element={<Apply />} />
+          </Route>
+          <Route path="apply" element={<Apply />}>
+            <Route path="instructions" element={<Instructions />} />
+            <Route path="application_fee" element={<Payments />} />
+            <Route path="application_form" element={<ApplyForm />} />
           </Route>
         </Routes>
         <Footer />

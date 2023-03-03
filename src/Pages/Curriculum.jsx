@@ -4,19 +4,27 @@ import { ContentVideos } from "../Components";
 import { Link } from "react-router-dom";
 
 const links = [
-  { id: 1, name: "Design thinking", url: "/" },
-  { id: 2, name: "Business plan", url: "/" },
-  { id: 3, name: "Project management", url: "/" },
-  { id: 4, name: "Prototyping your apps using Figma", url: "/" },
+  { id: 1, name: "Design thinking", url: "/courses/designthinking" },
+  { id: 2, name: "Business plan", url: "/courses/businessplan" },
+  { id: 3, name: "Project management", url: "/courses/projectmanagement" },
+  {
+    id: 4,
+    name: "Prototyping your apps using Figma",
+    url: "/courses/prototypingwithfigma",
+  },
   {
     id: 5,
     name: "How to plan your Finance according to your project requirements",
-    url: "/",
+    url: "/courses/financemanagement",
   },
-  { id: 6, name: "Problem solving", url: "/" },
-  { id: 7, name: "Build a Social Media page with HTML and CSS", url: "/" },
-  { id: 8, name: "Build a website with HTML and CSS", url: "/" },
-  { id: 9, name: "TIC Summit 2022 Day 1 & 2 Summary", url: "/" },
+  { id: 6, name: "Problem solving", url: "/courses/problemsolvingapproach" },
+  {
+    id: 7,
+    name: "Build a Social Media page with HTML and CSS",
+    url: "/courses",
+  },
+  { id: 8, name: "Build a website with HTML and CSS", url: "/courses" },
+  { id: 9, name: "TIC Summit 2022 Day 1 & 2 Summary", url: "/courses" },
 ];
 
 const linkStyle = {

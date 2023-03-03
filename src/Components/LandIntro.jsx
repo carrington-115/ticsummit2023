@@ -3,8 +3,10 @@ import styled from "styled-components";
 import { DiagBox, dots } from "../Images";
 import { Zoom } from "react-reveal";
 import CountDown from "./Countdown/CountDown";
+import { useNavigate } from "react-router-dom";
 
 function LandIntro() {
+  const navigate = useNavigate();
   return (
     <Container>
       <h1>
@@ -16,7 +18,7 @@ function LandIntro() {
         unleash their creative potentials and develop problem solving and
         technology skills.
       </h3>
-      <button>Apply Now</button>
+      <button onClick={() => navigate("/apply")}>Apply Now</button>
       <CountDown />
       <hr />
       <Zoom right>
