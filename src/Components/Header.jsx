@@ -39,7 +39,10 @@ function Header() {
             Curriculum
           </PageLink>
         </div>
-        <button className="header-btn" onClick={() => navigate("/apply")}>
+        <button
+          className="header-btn"
+          onClick={() => navigate("/apply/instructions")}
+        >
           Apply
         </button>
         <div
@@ -77,7 +80,7 @@ function Header() {
           >
             Curriculum
           </SidePageLink>
-          <button>Apply</button>
+          <button onClick={() => navigate("/apply/instructions")}>Apply</button>
         </div>
       </SideBar>
     </Container>

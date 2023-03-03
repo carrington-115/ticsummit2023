@@ -18,7 +18,7 @@ function LandIntro() {
         unleash their creative potentials and develop problem solving and
         technology skills.
       </h3>
-      <button onClick={() => navigate("/apply")}>Apply Now</button>
+      <button onClick={() => navigate("/apply/instructions")}>Apply Now</button>
       <CountDown />
       <hr />
       <Zoom right>

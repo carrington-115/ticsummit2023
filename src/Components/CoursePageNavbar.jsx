@@ -98,6 +98,10 @@ const SideBar = styled.nav`
   transform: ${(props) =>
     props.show ? "translateX(0%)" : "translateX(-100%)"};
   transition: all 0.25s 250ms ease-out;
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: 20;
+    bottom: 0;
+  }
 `;
 
 const Pages = styled.div`

@@ -24,6 +24,8 @@ import finance from "./finance.png";
 import problemsolving from "./problemsolving.png";
 import projectmanagement from "./projectmanagement.png";
 import prototyping from "./prototyping.png";
+import mtn from "./mtn.png";
+import orange from "./orange.png";
 
 export {
   Logo,
@@ -52,4 +54,6 @@ export {
   slack,
   tiktok,
   twitter,
+  mtn,
+  orange,
 };
