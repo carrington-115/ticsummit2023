@@ -1,4 +1,4 @@
-import Logo from "./Logo.svg";
+import Logo from "./Logo.png";
 import DiagBox from "./DiagBox.svg";
 import dots from "./dots.svg";
 import image1 from "./image1.png";
