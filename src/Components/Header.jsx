@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
-import { Logo } from "../Images";
+// import { Logo } from "../Images";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
+import Logo from "../Components/Logo.jsx";
 
 const logoLinkStyle = {
   TextDecoration: "none",
@@ -25,11 +26,14 @@ function Header() {
 
   return (
     <Container scrolling={scroll}>
+      {/*
       <Link className="logo-link" to="/" style={logoLinkStyle}>
         <div className="logo" scrolling={scroll}>
           <img src={Logo} alt="logo" />
         </div>
       </Link>
+          */}
+      <Logo />
       <nav className="navigation">
         <div className="pages">
           <PageLink to="/" style={logoLinkStyle}>
@@ -121,6 +125,11 @@ const Container = styled.div`
     background-color: white;
     z-index: 10;
   }
+
+  button {
+    border: solid transparent;
+  }
+
   .logo {
     width: 108px;
     height: 95px;
