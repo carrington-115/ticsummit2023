@@ -45,7 +45,6 @@ const CountDown = styled.div`
     justify-content: center;
     align-items: center;
     @media (min-width: 320px) and (max-width: 480px) {
-      padding: 0;
       font-size: 20px;
       width: 2cm;
       height: 2cm;

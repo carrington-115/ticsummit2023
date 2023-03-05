@@ -31,7 +31,7 @@ const Container = styled.div`
       height: 85vh;
     }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 700px) {
     padding-top: 3cm;
   }
 `;
