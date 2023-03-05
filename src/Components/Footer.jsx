@@ -1,5 +1,13 @@
 import React from "react";
+import Logo from "../Components/Logo.jsx";
 import styled from "styled-components";
+import {
+  SiTiktok,
+  SiInstagram,
+  SiFacebook,
+  SiLinkedin,
+  SiTwitter,
+} from "react-icons/si";
 import {
   facebook,
   instagram,
@@ -35,19 +43,23 @@ const links = [
 ];
 
 const socialMediaLinks = [
-  { id: 1, location: facebook },
-  { id: 2, location: instagram },
-  { id: 3, location: linkedin },
-  { id: 5, location: tiktok },
-  { id: 6, location: twitter },
+  <SiFacebook />,
+  <SiInstagram />,
+  <SiLinkedin />,
+  <SiTiktok />,
+  <SiTwitter />,
 ];
+
 function Footer() {
   return (
     <Container>
       <div className="first">
+        {/*
         <div className="logo">
           <img src={logo2} />
         </div>
+        */}
+        <Logo />
         <div className="partners">
           <h3>Partners</h3>
           <div className="partners-icon">
@@ -75,10 +87,8 @@ function Footer() {
         <div className="socialmedia">
           <h2>Socials</h2>
           <div className="links">
-            {socialMediaLinks.map((link) => (
-              <div key={link.id}>
-                <img src={link.location} />
-              </div>
+            {socialMediaLinks.map((link, idx) => (
+              <div key={idx}>{link}</div>
             ))}
           </div>
         </div>
@@ -120,7 +130,6 @@ const Container = styled.div`
         justify-content: space-around;
         width: 80%;
         padding: 0.5cm 1cm;
-        background-color: white;
       }
       h3 {
         margin: 0.25cm 0;
